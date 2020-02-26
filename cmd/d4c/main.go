@@ -1,7 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"net/http"
+
+	"github.com/labstack/echo"
+)
 
 func main() {
-	fmt.Println("vim-go")
+	e := echo.New()
+
+	e.GET("/", func(c echo.Context) error {
+		return c.String(http.StatusOK, "d4c")
+	})
+	e.Start(":8080")
 }
