@@ -1,0 +1,6 @@
+---
+routes:
+  - path: /
+    method: GET
+    text:
+      message: d4c
