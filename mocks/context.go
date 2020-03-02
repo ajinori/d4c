@@ -10,3 +10,7 @@ func (c Context) String(code int, message string) error {
 func (c Context) HTML(code int, message string) error {
 	return nil
 }
+
+func (c Context) JSON(code int, data interface{}) error {
+	return nil
+}

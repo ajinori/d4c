@@ -25,3 +25,8 @@ routes:
             <h1>Hello World!</h1>
           </body>
         </html>
+  - path: /ok
+    method: GET
+    plugin:
+      name: json
+      content: '{"message":"ok"}'
