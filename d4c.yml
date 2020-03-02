@@ -2,5 +2,6 @@
 routes:
   - path: /
     method: GET
-    text:
+    plugin:
+      name: text
       message: d4c

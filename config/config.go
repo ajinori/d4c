@@ -10,7 +10,8 @@ var (
 			Route{
 				Path:   "/",
 				Method: http.MethodGet,
-				Text: Text{
+				Plugin: Plugin{
+					Name:    "text",
 					Message: "d4c",
 				},
 			},
@@ -25,9 +26,10 @@ type Config struct {
 type Route struct {
 	Path   string `json:"path" yaml:"path"`
 	Method string `json:"method" yaml:"method"`
-	Text   Text   `json:"text" yaml:"text"`
+	Plugin Plugin `json:"plugin" yaml:"plugin"`
 }
 
-type Text struct {
+type Plugin struct {
+	Name    string `json:"name" yaml:"name"`
 	Message string `json:"message" yaml:"message"`
 }
