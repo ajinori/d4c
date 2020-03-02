@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/labstack/echo"
@@ -34,7 +35,8 @@ func main() {
 	for _, route := range c.Routes {
 		switch route.Method {
 		case http.MethodGet:
-			e.GET(route.Path, func(c echo.Context) error { return plugins.Run(c, route) })
+			fmt.Printf("add GET %s %v\n", route.Path, route)
+			e.GET(route.Path, plugins.Run(route))
 		}
 	}
 

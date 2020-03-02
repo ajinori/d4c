@@ -1,7 +1,13 @@
 ---
 routes:
-  - path: /
+  - path: /d4c
     method: GET
     plugin:
       name: text
       message: d4c
+  - path: /notfound
+    method: GET
+    code: 404
+    plugin:
+      name: text
+      message: not found
