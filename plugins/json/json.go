@@ -1,6 +1,7 @@
 package json
 
 import (
+	"encoding/json"
 	"net/http"
 
 	"github.com/ajinori/d4c/config"
@@ -16,5 +17,10 @@ func Run(c Context, route config.Route) error {
 		code = route.Code
 	}
 
-	return c.JSON(code, route.Plugin.Data)
+	var data interface{}
+	if err := json.Unmarshal([]byte(route.Plugin.Content), &data); err != nil {
+		c.JSON(http.StatusInternalServerError, err)
+	}
+
+	return c.JSON(code, data)
 }
