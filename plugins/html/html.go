@@ -1,4 +1,4 @@
-package text
+package html
 
 import (
 	"net/http"
@@ -7,7 +7,7 @@ import (
 )
 
 type Context interface {
-	String(int, string) error
+	HTML(int, string) error
 }
 
 func Run(c Context, route config.Route) error {
@@ -16,5 +16,5 @@ func Run(c Context, route config.Route) error {
 		code = route.Code
 	}
 
-	return c.String(code, route.Plugin.Message)
+	return c.HTML(code, route.Plugin.Content)
 }

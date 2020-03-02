@@ -1,4 +1,4 @@
-package text
+package html
 
 import (
 	"testing"
@@ -11,7 +11,7 @@ func TestModule(t *testing.T) {
 	c := mocks.Context{}
 	cfg := config.Route{
 		Plugin: config.Plugin{
-			Message: "message",
+			Content: "content",
 		},
 	}
 

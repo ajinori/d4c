@@ -34,4 +34,5 @@ type Route struct {
 type Plugin struct {
 	Name    string `json:"name" yaml:"name"`
 	Message string `json:"message" yaml:"message"`
+	Content string `json:"content" yaml:"content"`
 }

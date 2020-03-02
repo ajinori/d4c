@@ -35,7 +35,7 @@ func main() {
 	for _, route := range c.Routes {
 		switch route.Method {
 		case http.MethodGet:
-			fmt.Printf("add GET %s %v\n", route.Path, route)
+			fmt.Printf("add GET %s\n", route.Path)
 			e.GET(route.Path, plugins.Run(route))
 		}
 	}
