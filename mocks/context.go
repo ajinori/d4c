@@ -14,3 +14,7 @@ func (c Context) HTML(code int, message string) error {
 func (c Context) JSON(code int, data interface{}) error {
 	return nil
 }
+
+func (c Context) Redirect(code int, url string) error {
+	return nil
+}

@@ -30,3 +30,8 @@ routes:
     plugin:
       name: json
       content: '{"message":"ok"}'
+  - path: /google
+    method: GET
+    plugin:
+      name: redirect
+      url: https://google.com

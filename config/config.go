@@ -36,4 +36,5 @@ type Plugin struct {
 	Message string      `json:"message" yaml:"message"`
 	Content string      `json:"content" yaml:"content"`
 	Data    interface{} `json:"data" yaml:"data"`
+	URL     string      `json:"url" yaml:"url"`
 }
