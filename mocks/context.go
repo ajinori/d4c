@@ -18,3 +18,7 @@ func (c Context) JSON(code int, data interface{}) error {
 func (c Context) Redirect(code int, url string) error {
 	return nil
 }
+
+func (c Context) File(file string) error {
+	return nil
+}

@@ -35,3 +35,8 @@ routes:
     plugin:
       name: redirect
       url: https://google.com
+  - path: /d4c.yml
+    method: GET
+    plugin:
+      name: file
+      filename: d4c.yml
